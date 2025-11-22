@@ -66,3 +66,22 @@ console.log('\tEvery grade is a passing grade (>= 70)!');
 } else {
 console.log('\tNot all grades are passing.  A passing grade is >= 70!');
 }
+
+//using reverse Method to reverse a boolean,a number, astring and an array
+
+function reverse(x){
+    if (typeof(x) === 'boolean')
+    return !x;
+    else if (typeof(x) === 'number')
+    return x.toString().split('').reverse().join('');
+    if (typeof(x) === 'string')
+    return x.split('').reverse().join('');
+    else if (Array.isArray(x))
+    return x.reverse();
+else return false;
+}
+
+console.log(reverse(1234));
+console.log(reverse('hello'));
+console.log(reverse(true));
+console.log(reverse([1,2,3,4]));
