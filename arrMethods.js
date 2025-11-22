@@ -71,17 +71,44 @@ console.log('\tNot all grades are passing.  A passing grade is >= 70!');
 
 function reverse(x){
     if (typeof(x) === 'boolean')
-    return !x;
+        return !x;
     else if (typeof(x) === 'number')
-    return x.toString().split('').reverse().join('');
+        return x.toString().split('').reverse().join('');
     if (typeof(x) === 'string')
-    return x.split('').reverse().join('');
+        return x.split('').reverse().join('');
     else if (Array.isArray(x))
-    return x.reverse();
-else return false;
+        return x.reverse();
+    else 
+        return false;
 }
 
 console.log(reverse(1234));
 console.log(reverse('hello'));
 console.log(reverse(true));
 console.log(reverse([1,2,3,4]));
+
+//remove all the elements from an array using while loop
+
+function removeElements(array){
+    while(array.length>0){
+        array.pop();
+    }
+    return array;
+}
+console.log(removeElements([1,2,3,4,5]));
+
+
+function whichArrayIsLonger(array1, array2){
+    if (array1.length > array2.length){
+        return array1;
+    }
+    else if (array1.length < array2.length){
+        return array2;
+    }
+    else if (array1.length == array2.length)
+    return false;
+}
+
+console.log(whichArrayIsLonger([1,2,3,4,5],[1,2,3,4]));
+console.log(whichArrayIsLonger([1,2,3,4],[1,2,3,4,5,6]));
+console.log(whichArrayIsLonger([1,2,3,4],[1,2,3,4]));
